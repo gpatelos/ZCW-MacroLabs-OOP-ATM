@@ -35,5 +35,28 @@ public abstract class Account {
     public double getBalance() {
         return balance;
     }
+
+    public String deposit(double deposit) {
+
+        balance += deposit;
+
+        return "Your new balance is $" + String.format("%,.2f", balance);
+
+    }
+
+    public String withdrawl(double withdrawl){
+
+        balance -= withdrawl;
+
+        return "Your new balance is $" + String.format("%,.2f", balance);
+
+    }
+
+
+
+
+
 }
+
+
 

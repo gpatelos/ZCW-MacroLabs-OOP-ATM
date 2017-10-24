@@ -4,12 +4,12 @@ public class Customer {
 
     private String username;
     private String password;
-    private ArrayList<int> AccountList;
+    private ArrayList<Account> AccountList;
 
     public Customer(){
         this.username = "UNASSIGNED";
-        this.password = "password";
-        this.AccountList = {0};
+        this.password = "PASSWORD";
+        this.AccountList = null;
     }
 
 
@@ -29,17 +29,14 @@ public class Customer {
         return username;
     }
 
-    public void setAccountList(ArrayList[] accountList) {
-        AccountList = accountList;
+    public void setAccountList(Account anAccount) {
+        this.AccountList.add(anAccount);
     }
 
-    public ArrayList[] getAccountList() {
-        return AccountList;
-    }
+//    public ArrayList[] getAccountList() {
+//        return AccountList;
+//    }
 
-    public String deposit(){
-        return "";
-    }
 
 
 

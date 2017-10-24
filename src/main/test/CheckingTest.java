@@ -28,6 +28,37 @@ public class CheckingTest {
 
     }
 
+    @Test
+    public void depositTest(){
+
+        //given
+        Checking checking = new Checking();
+        String expected = "Your new balance is $11,000.00";
+
+        //when
+        checking.setBalance(6000);
+        String actual = checking.deposit(5000);
+
+        //then
+        Assert.assertEquals(expected,actual);
+
+
+    }
+
+    @Test
+    public void withdrawlTest(){
+
+        Checking checking = new Checking();
+        String expected = "Your new balance is $0.23";
+
+        checking.setBalance(4000.23);
+        String actual = checking.withdrawl(4000);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+
+
 
 
 }
