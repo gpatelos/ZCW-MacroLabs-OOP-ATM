@@ -7,8 +7,8 @@ public abstract class Account {
 
     public abstract void setBalance(double balance);
     public abstract double getBalance();
-    public abstract void setAcctnumber();
-    public abstract int getAcctnumber();
+    public abstract void setAcctNumber(int acctnumber);
+    public abstract int getAcctNumber();
 
 
 

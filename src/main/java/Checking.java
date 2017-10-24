@@ -12,28 +12,27 @@ public class Checking extends Account {
         this.balance = 0;
     }
 
-//    public Checking(int acctnumber){
-//        this.acctnumber = acctnumber;
-//        this.balance = 0;
+    public Checking(int acctnumber){
+        this.acctnumber = acctnumber;
+        this.balance = 0;
+    }
+
+//    public Checking(double initial_deposit){
+//        this(Checking);
+//    }
+//
+//    public Checking(int acctnumber, double initial_deposit){
+//        this(Checking);
+//        this.balance = initial_deposit;
 //    }
 
-    public Checking(double initial_deposit){
-        this(Checking);
-        this
-    }
-
-    public Checking(int acctnumber, double initial_deposit){
-        this(Checking);
-        this.balance = initial_deposit;
-    }
-
     @Override
-    public void setAcctnumber() {
+    public void setAcctNumber(int acctnumber) {
         this.acctnumber = acctnumber;
     }
 
     @Override
-    public int getAcctnumber() {
+    public int getAcctNumber() {
         return acctnumber;
     }
 
