@@ -6,6 +6,9 @@ public class CheckingTest {
     @Test
     public void CheckingTest(){
 
+        //check constructors
+
+
         //given
         Checking checking = new Checking(50000);
         Checking checking2 = new Checking();
