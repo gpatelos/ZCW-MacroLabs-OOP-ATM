@@ -1,6 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class CustomerTest {
 
     @Test
@@ -15,8 +17,22 @@ public class CustomerTest {
         //then
         Assert.assertEquals("test default username assignment", expected, actual);
 
-
     }
+
+//    @Test
+//    public void getAccountList(){
+//        //given
+//        Customer customer = new Customer();
+//        String expected = "Some weird string of objects or hashes";
+//
+//        //when
+//        Objec = customer.getAccountList();
+//
+//        //then
+//        Assert.assertEquals(expected, actual);
+//    }
+
+
 //    @Test
 //    public void getOneAccount(){
 //        //given

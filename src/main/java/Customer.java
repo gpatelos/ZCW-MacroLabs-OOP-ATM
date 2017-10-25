@@ -33,25 +33,28 @@ public class Customer {
     }
 
 
-    public ArrayList<Account> getAccountList() {
-        return AccountList;
-    }
+//    public String getAccountList() {
+//        for (:
+//             ) {
+//
+//        }
+//    }
 
-    public Account getAccount(int index){
-
-        return AccountList.get(index);
-
-    };
-
-    public String addOneAccount(){
-
-        return "";
-
-    }
-
-    public void closeAllAccounts(){
-
-    }
+//    public ArrayList<Account> getAccount(int index){
+//
+//        return AccountList;
+//
+//    };
+//
+//    public String addOneAccount(){
+//
+//        return "";
+//
+//    }
+//
+//    public void closeAllAccounts(){
+//
+//    }
 
 
 

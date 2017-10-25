@@ -71,6 +71,18 @@ public class CheckingTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void toStringTest(){
+        Savings savings = new Savings();
+        String expected = "Account#: 1";
+
+        String actual = savings.toString();
+
+        Assert.assertEquals(expected, actual);
+
+
+    }
+
 
 
 }
