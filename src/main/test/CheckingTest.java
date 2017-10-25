@@ -57,7 +57,19 @@ public class CheckingTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void transferTest(){
 
+        Checking fromChecking = new Checking(3500);
+        Savings  toSavings = new Savings(500);
+
+        String expected = "Transfer complete. New 'from' balance is $1,500.00. " +
+                "Your new 'to' balance is $2,500.00.";
+
+        String actual = fromChecking.transfer(toSavings, 2000);
+
+        Assert.assertEquals(expected, actual);
+    }
 
 
 

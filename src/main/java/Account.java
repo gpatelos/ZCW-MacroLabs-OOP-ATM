@@ -52,7 +52,15 @@ public abstract class Account {
 
     }
 
+    public String transfer(Account toAccount, double amount){
 
+        balance -= amount;
+
+        toAccount.balance += amount;
+
+
+        return "Transfer complete. New 'from' balance is $" + String.format("%,.2f", this.getBalance()) + ". Your new 'to' balance is $" + String.format("%,.2f", toAccount.getBalance())+".";
+    }
 
 
 

@@ -17,8 +17,32 @@ public class CustomerTest {
 
 
     }
+//    @Test
+//    public void getOneAccount(){
+//        //given
+//        Customer customer = new Customer();
+//        String expected = "Account 0";
+//
+//        //when
+//        String expected = customer.ArrayList.get(0)
+//    }
+//
+//    @Test
+//    public void addOneAccount(){
+//       //given
+//       Customer customer = new Customer();
+//       String expected = "Your new checking account 'gpatselas2' is now available.";
+//
+//       //when
+//       String actual =  customer.addOneAccount();
+//
+//
+//       //then
+//        Assert.assertEquals(expected,actual);
+//
+//    }
 
-    //moved deposit to account
+    //moved deposit to account class
 
 //    @Test
 //    public void depositTest(){

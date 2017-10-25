@@ -5,11 +5,14 @@ public class Customer {
     private String username;
     private String password;
     private ArrayList<Account> AccountList;
+    private int numberOfAccounts;
 
     public Customer(){
         this.username = "UNASSIGNED";
         this.password = "PASSWORD";
-        this.AccountList = null;
+        this.AccountList = new ArrayList<Account>();
+        this.AccountList.add(new Checking());
+        this.numberOfAccounts = 1;
     }
 
 
@@ -29,9 +32,31 @@ public class Customer {
         return username;
     }
 
-    public void setAccountList(Account anAccount) {
-        this.AccountList.add(anAccount);
+
+    public ArrayList<Account> getAccountList() {
+        return AccountList;
     }
+
+    public Account getAccount(int index){
+
+        return AccountList.get(index);
+
+    };
+
+    public String addOneAccount(){
+
+        return "";
+
+    }
+
+    public void closeAllAccounts(){
+
+    }
+
+
+
+
+
 
 //    public ArrayList[] getAccountList() {
 //        return AccountList;
