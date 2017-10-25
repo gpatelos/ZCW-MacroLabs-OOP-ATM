@@ -8,16 +8,21 @@ public class CustomerTest {
 
     @Test
     public void CustomerTest(){
+
+
         //given
-        Customer acustomer = new Customer();
-        String expected = "UNASSIGNED";
+        Customer customer = new Customer("luvmykitty47", "fluffy");
+        String expected_username = "luvmykitty47";
+        String expected_password = "fluffy";
 
         //when
-        String actual = acustomer.getUsername();
+        String actual_username = customer.getUsername();
+        String actual_password = customer.getPassword();
+
 
         //then
-        Assert.assertEquals("test default username assignment", expected, actual);
-
+        Assert.assertEquals("test constructor username", expected_username, actual_username);
+        Assert.assertEquals("test constructor password", expected_password, actual_password);
     }
 
 

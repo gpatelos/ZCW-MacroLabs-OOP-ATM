@@ -5,14 +5,25 @@ public class Customer {
     private String username;
     private String password;
     private ArrayList<Account> AccountList;
-    private int numberOfAccounts;
+
 
     public Customer(){
         this.username = "UNASSIGNED";
         this.password = "PASSWORD";
         this.AccountList = new ArrayList<Account>();
         this.AccountList.add(new Checking());
-        this.numberOfAccounts = 1;
+    }
+
+
+    public Customer(String username){
+        this();
+        this.username = username;
+
+    }
+
+    public Customer(String username, String password){
+        this(username);
+        this.password = password;
     }
 
 
@@ -34,10 +45,11 @@ public class Customer {
 
     public String getAccountByIndex(int index){
         return AccountList.get(index).toString();
+
     }
 
     public int getNumberOfAccounts(){
-        return numberOfAccounts;
+        return AccountList.size();
     }
 
     public Account getAccountObjectByIndex(int index){
@@ -45,9 +57,7 @@ public class Customer {
     }
 
     public void addOneAccount(){
-
         this.AccountList.add(new Checking());
-        this.numberOfAccounts++;
         return;
 
     }
