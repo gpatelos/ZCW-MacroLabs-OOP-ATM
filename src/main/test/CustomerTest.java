@@ -30,10 +30,28 @@ public class CustomerTest {
         //when
         String actual = customer.getAccountByIndex(0);
 
+        //then
         Assert.assertEquals(expected, actual);
 
 
     }
+
+    @Test
+    public void getAccountObjectByIndex(){
+        //given
+        Customer customer = new Customer();
+        Account expected = new Checking();
+
+        //when
+        Account actual = customer.getAccountObjectByIndex(0);
+
+        Assert.assertEquals(expected,actual);
+
+
+
+
+    }
+
 //    @Test
 //    public void getAccountList(){
 //        //given
