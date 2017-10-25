@@ -36,16 +36,36 @@ public class CustomerTest {
 
     }
 
+
     @Test
-    public void getAccountObjectByIndex(){
+    public void addOneAccountTest(){
         //given
         Customer customer = new Customer();
-        Account expected = new Checking();
+        String expected = "You now have 3 accounts: Account# 1, Account# 2, Account# 3.";
 
         //when
-        Account actual = customer.getAccountObjectByIndex(0);
+        customer.addOneAccount(); //add account 2
+        customer.addOneAccount(); //add account 3
 
-        Assert.assertEquals(expected,actual);
+
+        String actual = "You now have " + customer.getNumberOfAccounts() + " accounts: "; // + customer.listAllAccounts()
+
+        //then
+        Assert.assertEquals(expected, actual);
+
+
+    }
+
+//    @Test
+//    public void getAccountObjectByIndex(){
+//        //given
+//        Customer customer = new Customer();
+//        Account expected = new Checking();
+//
+//        //when
+//        Account actual = customer.getAccountObjectByIndex(0);
+//
+//        Assert.assertEquals(expected,actual);
 
 
 
@@ -112,6 +132,6 @@ public class CustomerTest {
 
 
 
-    }
+
 
 

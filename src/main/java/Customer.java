@@ -36,8 +36,20 @@ public class Customer {
         return AccountList.get(index).toString();
     }
 
+    public int getNumberOfAccounts(){
+        return numberOfAccounts;
+    }
+
     public Account getAccountObjectByIndex(int index){
         return AccountList.get(index);
+    }
+
+    public void addOneAccount(){
+
+        this.AccountList.add(new Checking());
+        this.numberOfAccounts++;
+        return;
+
     }
 
 
@@ -54,11 +66,7 @@ public class Customer {
 //
 //    };
 //
-//    public String addOneAccount(){
-//
-//        return "";
-//
-//    }
+
 //
 //    public void closeAllAccounts(){
 //
