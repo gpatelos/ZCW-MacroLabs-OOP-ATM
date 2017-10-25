@@ -1,5 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
+import sun.util.resources.cldr.so.CurrencyNames_so;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,20 @@ public class CustomerTest {
 
     }
 
+
+    @Test
+    public void getAccountByIndex(){
+        //given
+        Customer customer = new Customer();
+        String expected = "Account# 1";
+
+        //when
+        String actual = customer.getAccountByIndex(0);
+
+        Assert.assertEquals(expected, actual);
+
+
+    }
 //    @Test
 //    public void getAccountList(){
 //        //given

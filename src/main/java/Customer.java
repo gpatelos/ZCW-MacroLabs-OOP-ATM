@@ -32,6 +32,10 @@ public class Customer {
         return username;
     }
 
+    public String getAccountByIndex(int index){
+        return AccountList.get(index).toString();
+    }
+
 
 //    public String getAccountList() {
 //        for (:
