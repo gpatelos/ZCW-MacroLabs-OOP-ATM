@@ -24,8 +24,9 @@ public class AccountWarehouse {
         accounts.add(account);
     }
 
-    public String removeAccount(){
-        return;
+    public static void removeAccount(Account account){
+        accounts.remove(account);
+
     }
 
 

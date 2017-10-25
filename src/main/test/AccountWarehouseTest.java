@@ -5,14 +5,6 @@ import java.util.ArrayList;
 
 public class AccountWarehouseTest {
 
-//    @Test
-//    public static void getNumberofAccountsTest(){
-//        return AccountWarehouse.size();
-//    }
-
-
-
-
 
     @Test
     public void findAccountByAcctNumber(){
@@ -48,21 +40,19 @@ public class AccountWarehouseTest {
 
     @Test
     public void removeAccountTest(){
-        //given
-        Account acctnumber1 = new Savings();
-        Account acctnumber2 = new Savings();
-        Account acctnumber3 = new Checking();
-        AccountWarehouse.addAccount(acctnumber1);
-        AccountWarehouse.addAccount(acctnumber2);
-        AccountWarehouse.addAccount(acctnumber3);
-        String = "Account# 3 removed";
 
+        //given
+        ArrayList<Account> accounts = AccountWarehouse.getAccounts();
+        Account acctnumber1 = new Savings();
 
         //when
-        AccountWarehouse.removeAccount(3);
+        AccountWarehouse.addAccount(acctnumber1);
+        AccountWarehouse.removeAccount(acctnumber1);
+        Account actual = AccountWarehouse.findAccountByAcctNumber(1);
+
 
         //then
-
+        Assert.assertEquals(null, actual);
 
     }
 
