@@ -35,6 +35,8 @@ public class CustomerTest {
         customer.openAccount();
 
         //Account actual = customer.lookupAcctByNumber();
+        //when you realize that you're trying to figure out how declare an "expected" object before
+        //it's been created, it's time to go to bed.
         int actual =customer.getCustomerAccounts().size();
 
         //then
@@ -52,8 +54,8 @@ public class CustomerTest {
         customer.getCustomerAccounts().add(checking);
 
         //when
-        Account lookedUpAccont = customer.lookupAcctByNumber(expected);
-        int actual = lookedUpAccont.getAcctNumber();
+        Account lookedUpAccount = customer.lookupAcctByNumber(expected);
+        int actual = lookedUpAccount.getAcctNumber();
 
         //then
         Assert.assertEquals(expected,actual);
