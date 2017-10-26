@@ -61,16 +61,16 @@ public abstract class Account {
         return "Transfer complete. New 'from' balance is $" + String.format("%,.2f", this.getBalance()) + ". Your new 'to' balance is $" + String.format("%,.2f", toAccount.getBalance())+".";
     }
 
-    @Override
-    public String toString(){
-        return "Account# " + this.acctnumber;
-
-
-    }
-
+//    @Override
+//    public String toString(){
+//        return "Account# " + this.acctnumber;
 
 
 }
+
+
+
+
 
 
 

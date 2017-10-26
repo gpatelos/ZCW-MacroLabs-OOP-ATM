@@ -48,14 +48,18 @@ public class Customer {
     }
 
     public void openAccount(){
-      //  customerAccounts.add();
-     //   AccountWarehouse.addAccount();
+        Account checking = new Checking();
+        customerAccounts.add(checking);
+        AccountWarehouse.addAccount(checking);
 
 
     }
 
     public Account lookupAcctByNumber(int accountnumber){
-
+        for(int i = 0; i <customerAccounts.size(); i++){
+            if(customerAccounts.get(i).getAcctNumber() == accountnumber){}
+                return customerAccounts.get(i);
+        }
         return null;
     }
 
