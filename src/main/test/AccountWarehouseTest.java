@@ -42,17 +42,17 @@ public class AccountWarehouseTest {
     public void removeAccountTest(){
 
         //given
-        ArrayList<Account> accounts = AccountWarehouse.getAccounts();
+        Account expected = null;
         Account acctnumber1 = new Savings();
 
         //when
         AccountWarehouse.addAccount(acctnumber1);
         AccountWarehouse.removeAccount(acctnumber1);
-        Account actual = AccountWarehouse.findAccountByAcctNumber(1);
+        Account actual = AccountWarehouse.findAccountByAcctNumber(acctnumber1.getAcctNumber());
 
 
         //then
-        Assert.assertEquals(null, actual);
+        Assert.assertEquals(expected, actual);
 
     }
 

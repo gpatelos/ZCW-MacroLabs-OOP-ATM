@@ -4,14 +4,14 @@ public class Customer {
 
     private String username;
     private String password;
-    private ArrayList<Account> AccountList;
+    private ArrayList<Account> customerAccounts;
 
 
     public Customer(){
         this.username = "UNASSIGNED";
         this.password = "PASSWORD";
-        this.AccountList = new ArrayList<Account>();
-        this.AccountList.add(new Checking());
+        this.customerAccounts = new ArrayList<Account>();
+        this.customerAccounts.add(new Checking());
     }
 
 
@@ -43,25 +43,43 @@ public class Customer {
         return username;
     }
 
-    public String getAccountByIndex(int index){
-        return AccountList.get(index).toString();
+    public ArrayList<Account> getCustomerAccounts() {
+        return customerAccounts;
+    }
+
+    public void openAccount(){
+        customerAccounts.add();
+        AccountWarehouse.addAccount();
 
     }
 
-    public int getNumberOfAccounts(){
-        return AccountList.size();
-    }
+    public Account lookupAcctByNumber(int accountnumber){
 
-    public Account getAccountObjectByIndex(int index){
-        return AccountList.get(index);
-    }
-
-    public void addOneAccount(){
-        this.AccountList.add(new Checking());
         return;
-
     }
 
+
+
+
+    //    public String getAccountByIndex(int index){
+//        return AccountList.get(index).toString();
+//
+//    }
+//
+//    public int getNumberOfAccounts(){
+//        return AccountList.size();
+//    }
+//
+//    public Account getAccountObjectByIndex(int index){
+//        return AccountList.get(index);
+//    }
+//
+//    public void addOneAccount(){
+//        this.AccountList.add(new Checking());
+//        return;
+//
+//    }
+//
 
 //    public String getAccountList() {
 //        for (:

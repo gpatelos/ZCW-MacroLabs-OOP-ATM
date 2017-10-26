@@ -74,7 +74,7 @@ public class CheckingTest {
     @Test
     public void toStringTest(){
         Savings savings = new Savings();
-        String expected = "Account#: 1";
+        String expected = "Account# 1";
 
         String actual = savings.toString();
 

@@ -25,41 +25,82 @@ public class CustomerTest {
         Assert.assertEquals("test constructor password", expected_password, actual_password);
     }
 
-
     @Test
-    public void getAccountByIndex(){
+    public void openAccount(){
         //given
         Customer customer = new Customer();
-        String expected = "Account# 1";
+        Checking expected = new Checking();
 
         //when
-        String actual = customer.getAccountByIndex(0);
+        customer.openAccount();
+        Checking actual = customer.lookupAccount(expected.getAcctNumber())
 
         //then
-        Assert.assertEquals(expected, actual);
-
+        Assert.assertEquals(expected,actual);
 
     }
 
-
     @Test
-    public void addOneAccountTest(){
+    public void lookupAccountByNumber(){
         //given
         Customer customer = new Customer();
-        String expected = "You now have 3 accounts: Account# 1, Account# 2, Account# 3.";
+        Checking expected = new Checking();
+
+        customer.getCustomerAccounts().add(expected);
+
 
         //when
-        customer.addOneAccount(); //add account 2
-        customer.addOneAccount(); //add account 3
-
-
-        String actual = "You now have " + customer.getNumberOfAccounts() + " accounts: "; // + customer.listAllAccounts()
+        Checking actual = lookupAccountByNumber(expected.getAcctNumber());
 
         //then
-        Assert.assertEquals(expected, actual);
-
 
     }
+
+//    @Test
+//    public void getCustomerAccountsTest(){
+//        //given
+//        Customer customer = new Customer();
+//        ArrayList<Account> customerAccounts = new
+//        //when
+//
+//        //then
+//    }
+//
+//
+//    @Test
+//    public void getAccountByIndex(){
+//        //given
+//        Customer customer = new Customer();
+//        String expected = "Account# 1";
+//
+//        //when
+//        String actual = customer.getAccountByIndex(0);
+//
+//        //then
+//        Assert.assertEquals(expected, actual);
+//
+//
+//    }
+//
+//
+//    @Test
+//    public void addOneAccountTest(){
+//        //given
+//        Customer customer = new Customer();
+//        String expected = "You now have 3 accounts: Account# 1, Account# 2, Account# 3.";
+//
+//        //when
+//        customer.addOneAccount(); //add account 2
+//        customer.addOneAccount(); //add account 3
+//
+//
+//        String actual = "You now have " + customer.getNumberOfAccounts() + " accounts: "; // + customer.listAllAccounts()
+//
+//        //then
+//        Assert.assertEquals(expected, actual);
+//
+//
+//    }
 
 //    @Test
 //    public void getAccountObjectByIndex(){

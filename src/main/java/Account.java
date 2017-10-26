@@ -3,13 +3,12 @@ public abstract class Account {
 
     private int acctnumber;
     private double balance;
-    private static int nextAvailableAcctNumber = 1;
 
 
     public Account(){
-        this.acctnumber = nextAvailableAcctNumber;
+        this.acctnumber = AccountWarehouse.getAccounts().size();
         this.balance = 0;
-        nextAvailableAcctNumber++;
+        //nextAvailableAcctNumber++;
     }
 
     public Account(double initial_deposit){
