@@ -48,14 +48,15 @@ public class Customer {
     }
 
     public void openAccount(){
-        customerAccounts.add();
-        AccountWarehouse.addAccount();
+      //  customerAccounts.add();
+     //   AccountWarehouse.addAccount();
+
 
     }
 
     public Account lookupAcctByNumber(int accountnumber){
 
-        return;
+        return null;
     }
 
 

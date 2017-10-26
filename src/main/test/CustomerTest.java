@@ -29,11 +29,11 @@ public class CustomerTest {
     public void openAccount(){
         //given
         Customer customer = new Customer();
-        Checking expected = new Checking();
+        Account expected = new Checking();
 
         //when
         customer.openAccount();
-        Checking actual = customer.lookupAccount(expected.getAcctNumber())
+        Account actual = customer.lookupAcctByNumber(expected.getAcctNumber());
 
         //then
         Assert.assertEquals(expected,actual);
@@ -44,15 +44,18 @@ public class CustomerTest {
     public void lookupAccountByNumber(){
         //given
         Customer customer = new Customer();
-        Checking expected = new Checking();
+        Account checking = new Checking();
+        int expected = checking.getAcctNumber();
 
-        customer.getCustomerAccounts().add(expected);
+        customer.getCustomerAccounts().add(checking);
 
 
         //when
-        Checking actual = lookupAccountByNumber(expected.getAcctNumber());
+        Account lookedUpAccont = customer.lookupAcctByNumber(expected);
+        int actual = lookedUpAccont.getAcctNumber();
 
         //then
+        Assert.assertEquals(expected,actual);
 
     }
 
